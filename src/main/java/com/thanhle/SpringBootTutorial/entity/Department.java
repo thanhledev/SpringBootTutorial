@@ -15,8 +15,10 @@ import javax.persistence.*;
 @Builder
 @Table(
         uniqueConstraints = {
-                @UniqueConstraint(name = "uniqueDepartmentNameAndCode",
-                        columnNames = {"department_name", "department_code"})
+                @UniqueConstraint(name = "uniqueDepartmentName",
+                        columnNames = {"department_name"}),
+                @UniqueConstraint(name = "uniqueDepartmentCde",
+                        columnNames = {"department_code"})
         }
 )
 public class Department {
